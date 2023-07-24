@@ -35,7 +35,9 @@ inquirer
             question: 'What is your email address?',
             name: 'email'
         }
-    ])
+    ]).then(function(response){
+        console.log(response)
+    })
     .select({
         message: 'Choose a license for your application...',
         choices: [
