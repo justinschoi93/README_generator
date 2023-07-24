@@ -1,0 +1,15 @@
+{
+  "name": "module-9-challenge-jc93",
+  "version": "1.0.0",
+  "description": "## User Story AS A developer I WANT a README generator SO THAT I can quickly create a professional README for a new project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.8"
+  }
+}
