@@ -85,8 +85,7 @@ inquirer
 
     //    console.log(response.badge);
        var text = generateREADMEText(response);
-       console.log(text);
-
+      
         fs.writeFile('README2.md', JSON.parse(text), (error) => {
             error ? console.log(error) : console.log('success!')
         })
@@ -96,30 +95,30 @@ function generateREADMEText(data) {
     var README = 
     `# ${data.title} ${data.badge}
 
-    ## Description
-    ${data.description}
-    
-    ## Table of Contents
+## Description
+${data.description}
 
-    ## Installation Steps
-    ${data['installation-steps']}
+## Table of Contents
 
-    ## Directions on how to use
-    ${data.directions}
+## Installation Steps
+${data['installation-steps']}
 
-    ## License
-    ${data.license}
-    
-    ## Contributors
-    ${data.contributors}
-    
-    ## How to Test
-    ${data.tests}
+## Directions on how to use
+${data.directions}
 
-    ## Questions
-    If you have any questions, feel free to contact me via email or gitHub.
-    https://github.com/${data.gitHub}
-    ${data.email}`;
+## License
+${data.license}
+
+## Contributors
+${data.contributors}
+
+## How to Test
+${data.tests}
+
+## Questions
+If you have any questions, feel free to contact me via email or gitHub.
+https://github.com/${data.gitHub}
+${data.email}`;
 
     return JSON.stringify(README);
 }

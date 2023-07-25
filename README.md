@@ -23,15 +23,5 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
 
-<!-- Sections
-
--Description - input
--Table of Contents - 
--Installation - input
--Usage
--Licencse - dropdown, adds badge near top of README, notice is added to section
--Contributing - input
--Tests - input
--Questions - When gitHub username and email are enetered, link to github profile is added to this section. 
-
--->
+<!-- remove indents -->
+<!-- make video -->

@@ -1,5 +1,4 @@
-
-    # A [![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+# A [![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 
     ## Description
     A
@@ -13,7 +12,7 @@
     A
 
     ## License
-    GNU General Public License (GPU)
+    Mozilla Public License (MPL)
     
     ## Contributors
     A
@@ -25,7 +24,3 @@
     If you have any questions, feel free to contact me via email or gitHub.
     https://github.com/A
     A
-
-
-    
-    
