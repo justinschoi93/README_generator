@@ -80,10 +80,34 @@ inquirer
     })
 
 function generateREADMEText(data) {
-    var README = '
-    #
+    var README = `
+    # ${data.title}
+
+    ## Description
+    ${data.description}
     
+    ## Installation Steps
+    ${data.installation-steps}
+
+    ## Directions on how to use
+    ${data.directions}
     
-    ';
+    ## Contributors
+    ${data.contributors}
+    
+    ## How to Test
+    ${data.tests}
+
+    ## Questions
+    If you have any questions, feel free to contact me via email or gitHub.
+    ${data.gitHub}
+    ${data.email}
+
+    ## License
+    ${data.license}
+    
+    `;
     return README;
 }
+
+//table of contents
