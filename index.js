@@ -29,45 +29,49 @@ inquirer
         },
         {
             question: 'What is your gitHub username?',
-            name: 'gitHubUserName'
+            name: 'gitHub'
         },
         {
             question: 'What is your email address?',
             name: 'email'
+        },
+        {
+            question: 'Choose a license for your application',
+            name: 'license',
+            type: 'list',
+            choices: [
+                        {
+                            name: '',
+                            value: '',
+                            description: ''
+                        },
+                        {
+                            name: '',
+                            value: '',
+                            description: ''
+                        },
+                        {
+                            name: '',
+                            value: '',
+                            description: ''
+                        },
+                        {
+                            name: '',
+                            value: '',
+                            description: ''
+                        },
+                        {
+                            name: '',
+                            value: '',
+                            description: ''
+                        }
+                    ]
+
         }
     ]).then(function(response){
         console.log(response)
     })
-    .select({
-        message: 'Choose a license for your application...',
-        choices: [
-            {
-                name: '',
-                value: '',
-                description: ''
-            },
-            {
-                name: '',
-                value: '',
-                description: ''
-            },
-            {
-                name: '',
-                value: '',
-                description: ''
-            },
-            {
-                name: '',
-                value: '',
-                description: ''
-            },
-            {
-                name: '',
-                value: '',
-                description: ''
-            }
-        ]
-    })
+    // 
 
 //README gets generated after a series of prompts and questions.
 
