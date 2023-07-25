@@ -41,56 +41,74 @@ inquirer
             type: 'list',
             choices: [
                         {
-                            name: '',
-                            value: '',
-                            description: ''
+                            name: 'GNU General Public License (GPU)',
+                            value: 'GNU General Public License (GPU)',
+                            description: 'The most popular open source license.'
                         },
                         {
-                            name: '',
-                            value: '',
-                            description: ''
+                            name: 'The Apache License',
+                            value: 'The Apache License',
+                            description: 'Released by Apache Software Foundation (ASF), it is a popular and widely deployed open source license backed by a strong community.'
                         },
                         {
-                            name: '',
-                            value: '',
-                            description: ''
+                            name: 'Mozilla Public License (MPL)',
+                            value: 'Mozilla Public License (MPL)',
+                            description: 'A free and open source software license released by Microsoft.'
                         },
                         {
-                            name: '',
-                            value: '',
-                            description: ''
+                            name: 'Berkeley Software Distribution (BSD)',
+                            value: 'Berkeley Software Distribution (BSD)',
+                            description: 'A permissive free software license.'
                         },
                         {
-                            name: '',
-                            value: '',
-                            description: ''
+                            name: 'Eclipse Public License (EPL)',
+                            value: 'Eclipse Public License (EPL)',
+                            description: 'An open source license developed by the Eclipse Foundation.'
                         }
                     ]
 
         }
     ]).then(function(response){
         
-        var text = generateREADMEText(response);
-       
-       
+       switch (response.license) {
+        case 'GNU General Public License (GPU)':
+            response.badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;        
+        case 'The Apache License':
+            response.badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+        case 'Mozilla Public License (MPL)':
+            response.badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+        case 'Berkeley Software Distribution (BSD)':
+            response.badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+        case 'Eclipse Public License (EPL)':
+            response.badge = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+       }
 
-        fs.writeFile('README.md', JSON.stringify(text), (error) => {
+    //    console.log(response.badge);
+       var text = generateREADMEText(response);
+       console.log(text);
+
+        fs.writeFile('README2.md', JSON.parse(text), (error) => {
             error ? console.log(error) : console.log('success!')
         })
     })
 
 function generateREADMEText(data) {
     var README = `
-    # ${data.title}
+    # ${data.title} ${data.badge}
 
     ## Description
     ${data.description}
     
+    ## Table of Contents
+
     ## Installation Steps
-    ${data.installation-steps}
+    ${data['installation-steps']}
 
     ## Directions on how to use
     ${data.directions}
+
+    ## License
+    ${data.license}
     
     ## Contributors
     ${data.contributors}
@@ -100,14 +118,13 @@ function generateREADMEText(data) {
 
     ## Questions
     If you have any questions, feel free to contact me via email or gitHub.
-    ${data.gitHub}
+    https://github.com/${data.gitHub}
     ${data.email}
 
-    ## License
-    ${data.license}
+
     
     `;
-    return README;
+    return JSON.stringify(README);
 }
 
 //table of contents
