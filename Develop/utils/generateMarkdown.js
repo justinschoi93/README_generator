@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'GNU General Public License (GPU)':
-        response.badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;        
+        return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;        
     case 'The Apache License':
-        response.badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
+        return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
     case 'Mozilla Public License (MPL)':
-        response.badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
+        return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
     case 'Berkeley Software Distribution (BSD)':
-        response.badge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`;
+        return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`;
     case 'Eclipse Public License (EPL)':
-        response.badge = `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`;
+        return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`;
    }
 }
 
@@ -20,15 +20,15 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license) {
     case 'GNU General Public License (GPU)':
-        response.link = `https://www.gnu.org/licenses/gpl-3.0`;        
+        return `https://www.gnu.org/licenses/gpl-3.0`;        
     case 'The Apache License':
-        response.link = `https://opensource.org/licenses/Apache-2.0`;
+        return `https://opensource.org/licenses/Apache-2.0`;
     case 'Mozilla Public License (MPL)':
-        response.link = `https://opensource.org/licenses/MPL-2.0`;
+        return `https://opensource.org/licenses/MPL-2.0`;
     case 'Berkeley Software Distribution (BSD)':
-        response.link = `https://opensource.org/licenses/BSD-3-Clause`;
+        return `https://opensource.org/licenses/BSD-3-Clause`;
     case 'Eclipse Public License (EPL)':
-        response.link = `https://opensource.org/licenses/EPL-1.0`;
+        return `https://opensource.org/licenses/EPL-1.0`;
    }
 }
 
@@ -68,11 +68,12 @@ ${data.tests}
 
 ## Questions
 If you have any questions, feel free to contact me via email or gitHub.
-https://github.com/${data.gitHub}
-${data.email}`;
+
+gitHub: https://github.com/${data.gitHub}
+email: ${data.email}`;
 
     return JSON.stringify(README);
 }
 
-module.exports = renderLicenseBadge;
+module.exports = {generateMarkdown, renderLicenseBadge, renderLicenseLink};
 
