@@ -93,8 +93,8 @@ inquirer
     })
 
 function generateREADMEText(data) {
-    var README = `
-    # ${data.title} ${data.badge}
+    var README = 
+    `# ${data.title} ${data.badge}
 
     ## Description
     ${data.description}
@@ -119,11 +119,8 @@ function generateREADMEText(data) {
     ## Questions
     If you have any questions, feel free to contact me via email or gitHub.
     https://github.com/${data.gitHub}
-    ${data.email}
+    ${data.email}`;
 
-
-    
-    `;
     return JSON.stringify(README);
 }
 
