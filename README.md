@@ -1,4 +1,25 @@
-# module-9-challenge-JC93
+# Module 9 Challenge - README.md Generator
+
+## Technology Used 
+
+| Technology Used         | Resource URL           | 
+| ------------- |:-------------:| 
+| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
+| Javascript     | [https://developer.mozilla.org/en-US/docs/Web/Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)      |   
+| Git | [https://github.com/](https://github.com/)     |    
+| Node     | [https://developer.mozilla.org/en-US/docs/Web/Javascript](https://nodejs.org/docs/latest-v20.x/api/)
+
+## Description 
+
+We were asked to develop an application that can be run through terminal/command line to create a professional README.md. 
+
+## Usage 
+1. Navigate to the directory titled Develop, within the downloaded repository. 
+2. Run ~$ node index.js
+3. Answer the following prompts in your cmdline/terminal
+
+![the code](./Develop/assets/screenshot1.jpg)
+![Check out the Walk-through video!](./Develop/assets/walkthrough.webm)
 
 ## User Story
 AS A developer
@@ -6,6 +27,7 @@ I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 
 ## Acceptance Criteria
+
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for information about my application repository
 THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -22,4 +44,14 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
-<!-- make video -->
+
+## Learning Points 
+
+The purpose of this challenge was to grant us with the opportunity to practice writing code in javascript. To be more specific, we were encouraged to develop an application through the use of node packages, fs and inquire, as well a few scripts of our own. We were asked to make these scripts accessible by saving them as module.exports, which we then imported in our index and used to successfully generate a professional README.md within the directory titled Develop. 
+
+
+## My Info
+
+* [LinkedIn](https://linkedin.com/in/justinchoica)
+* [Github](https://github.com/justinschoi93)
+* [Email](justinschoi93@gmail.com)
