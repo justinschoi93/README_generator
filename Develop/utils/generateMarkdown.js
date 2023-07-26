@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'GNU General Public License (GPU)':
-        return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;        
+        return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;        
     case 'The Apache License':
-        return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
+        return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
     case 'Mozilla Public License (MPL)':
-        return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
+        return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
     case 'Berkeley Software Distribution (BSD)':
-        return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]`;
+        return `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
     case 'Eclipse Public License (EPL)':
-        return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]`;
+        return `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)`;
    }
 }
 

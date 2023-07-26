@@ -1,7 +1,7 @@
-# Title [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]
+# Module 9 Challenge ![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
 
 ## Description
-A
+We were asked to design a command line application that would generate a professional README.md, through the use of javascript, node packages, and scripts saved as module exports. 
 
 ## Table of Contents
 -[Title](#Title)
@@ -14,23 +14,23 @@ A
 -[Questions](#Questions)
 
 ## Installation Steps
-A
+By cloning the repository off of gitHub.
 
 ## Directions on how to use
-A
+Navigate to the Develop folder within the downloaded repository via command line. run ~$ node index.js; answer the following prompts. 
 ![screenshot](./assets/screenshot1.jpg)
 
 ## License
-GNU General Public License (GPU)
+Berkeley Software Distribution (BSD)
 
 ## Contributors
-A
+Me, myself and I. 
 
 ## How to Test
-A
+By following the directions and looking over the produced README.md. 
 
 ## Questions
 If you have any questions, feel free to contact me via email or gitHub.
 
-gitHub: https://github.com/A
-email: A
+gitHub: https://github.com/justinschoi93
+email: justinschoi93@gmail.com
