@@ -1,7 +1,7 @@
 # Module 9 Challenge ![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
 
 ## Description
-We were asked to design a command line application that would generate a professional README.md, through the use of javascript, node packages, and scripts saved as module exports. 
+Description
 
 ## Table of Contents
 -[Title](#Title)
@@ -14,20 +14,21 @@ We were asked to design a command line application that would generate a profess
 -[Questions](#Questions)
 
 ## Installation Steps
-By cloning the repository off of gitHub.
+Installation Steps 
 
 ## Directions on how to use
-Navigate to the Develop folder within the downloaded repository via command line. run ~$ node index.js; answer the following prompts. 
+Directions
 ![screenshot](./assets/screenshot1.jpg)
+![walkthrough](./assets/walkthrough.webm)
 
 ## License
 Berkeley Software Distribution (BSD)
 
 ## Contributors
-Me, myself and I. 
+Me, myself and I
 
 ## How to Test
-By following the directions and looking over the produced README.md. 
+Follow the directions. Look over the generated README.md. It will appear in the Develop folder. 
 
 ## Questions
 If you have any questions, feel free to contact me via email or gitHub.

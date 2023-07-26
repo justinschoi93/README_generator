@@ -65,6 +65,7 @@ ${data['installation-steps']}
 ## Directions on how to use
 ${data.directions}
 ![screenshot](./assets/screenshot1.jpg)
+![walkthrough](./assets/walkthrough.webm)
 
 ## License
 ${data.license}
