@@ -88,7 +88,7 @@ function init() {
         response.link = myFunctions.renderLicenseLink(response.license);
 
         var textStr = myFunctions.generateMarkdown(response);
-        writeToFile('README2.md', JSON.parse(textStr))
+        writeToFile('README.md', JSON.parse(textStr))
     })
 }
 

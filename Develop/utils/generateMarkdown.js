@@ -52,11 +52,11 @@ ${data.description}
 ## Table of Contents
 -[Title](#Title)
 -[Description](#Description)
--[Installation Steps](#Installation Steps)
+-[Installation_Steps](#Installation_Steps)
 -[Directions](#Directions) 
 -[License](#License)
 -[Contributors](#Contributors)
--[How to Test](#How to Test)
+-[How_to_Test](#How_to_Test)
 -[Questions](#Questions)
 
 ## Installation Steps
@@ -64,7 +64,7 @@ ${data['installation-steps']}
 
 ## Directions on how to use
 ${data.directions}
-![screenshot](../assets/screenshot1.jpg)
+![screenshot](./assets/screenshot1.jpg)
 
 ## License
 ${data.license}
