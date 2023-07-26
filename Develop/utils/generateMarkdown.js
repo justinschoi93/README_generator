@@ -50,20 +50,21 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Table of Contents
-[Title](#Title)
-[Description](#Description)
-[Installation Steps](#Installation Steps)
-[Directions](#Directions) 
-[License](#License)
-[Contributors](#Contributors)
-[How to Test](#How to Test)
-[Questions](#Questions)
+-[Title](#Title)
+-[Description](#Description)
+-[Installation Steps](#Installation Steps)
+-[Directions](#Directions) 
+-[License](#License)
+-[Contributors](#Contributors)
+-[How to Test](#How to Test)
+-[Questions](#Questions)
 
 ## Installation Steps
 ${data['installation-steps']}
 
 ## Directions on how to use
 ${data.directions}
+![screenshot](../assets/screenshot1.jpg)
 
 ## License
 ${data.license}
