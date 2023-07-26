@@ -22,5 +22,6 @@ A
 
 ## Questions
 If you have any questions, feel free to contact me via email or gitHub.
-https://github.com/A
-A
+
+gitHub: https://github.com/A
+email: A

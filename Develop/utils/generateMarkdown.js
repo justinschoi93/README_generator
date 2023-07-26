@@ -50,6 +50,14 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Table of Contents
+Title
+Description
+Installation Steps
+Directions 
+License
+Contributors
+How to Test
+Questions
 
 ## Installation Steps
 ${data['installation-steps']}
