@@ -76,14 +76,14 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+    fs.writeFile(`fin/${fileName}`, data, (err) => {
         err ? console.log('error') : console.log('success!');
     })
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(function(response){
+    inquirer.prompt(questions).then((response) => {
         response.badge = myFunctions.renderLicenseBadge(response.license);
         response.link = myFunctions.renderLicenseLink(response.license);
 

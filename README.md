@@ -1,13 +1,12 @@
-# Module 9 Challenge - README.md Generator
+# Justin's README.md Generator
 
 ## Technology Used 
 
-| Technology Used         | Resource URL           | 
-| ------------- |:-------------:| 
-| HTML    | [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
-| Javascript     | [https://developer.mozilla.org/en-US/docs/Web/Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)      |   
-| Git | [https://github.com/](https://github.com/)     |    
-| Node     | [https://developer.mozilla.org/en-US/docs/Web/Javascript](https://nodejs.org/docs/latest-v20.x/api/)
+
+| HTML            | (https://developer.mozilla.org/en-US/docs/Web/HTML)| 
+| Javascript      | (https://developer.mozilla.org/en-US/docs/Web/JavaScript)|   
+| Node - Inquirer | (https://www.npmjs.com/package/inquirer)
+| Node - fs       | (https://nodejs.org/api/fs.html)
 
 ## Description 
 
@@ -17,6 +16,7 @@ We were asked to develop an application that can be run through terminal/command
 1. Navigate to the directory titled Develop, within the downloaded repository. 
 2. Run ~$ node index.js
 3. Answer the following prompts in your cmdline/terminal
+4. The README.md will appear in Main/fin
 
 ![the code](./Develop/assets/screenshot1.jpg)
 ![Check out the Walk-through video!](./Develop/assets/walkthrough.webm)
@@ -52,6 +52,6 @@ The purpose of this challenge was to grant us with the opportunity to practice w
 
 ## My Info
 
-* [LinkedIn](https://linkedin.com/in/justinchoica)
+* [LinkedIn](https://linkedin.com/in/justinschoi93)
 * [Github](https://github.com/justinschoi93)
 * [Email](justinschoi93@gmail.com)
