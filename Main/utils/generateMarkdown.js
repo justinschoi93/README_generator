@@ -1,89 +1,75 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  switch (license) {
-    case 'GNU General Public License (GPU)':
-        return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;        
-    case 'The Apache License':
-        return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
-    case 'Mozilla Public License (MPL)':
-        return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
-    case 'Berkeley Software Distribution (BSD)':
-        return `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
-    case 'Eclipse Public License (EPL)':
-        return `![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)`;
-   }
+  if (!license) {
+    return '';
+  } else {
+    return `![${license}](https://img.shields.io/badge/License-${license}-blue.svg)`
+  }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  switch (license) {
-    case 'GNU General Public License (GPU)':
-        return `https://www.gnu.org/licenses/gpl-3.0`;        
-    case 'The Apache License':
-        return `https://opensource.org/licenses/Apache-2.0`;
-    case 'Mozilla Public License (MPL)':
-        return `https://opensource.org/licenses/MPL-2.0`;
-    case 'Berkeley Software Distribution (BSD)':
-        return `https://opensource.org/licenses/BSD-3-Clause`;
-    case 'Eclipse Public License (EPL)':
-        return `https://opensource.org/licenses/EPL-1.0`;
-   }
+  if (!license) {
+    return '';
+  } else {
+    let licenseKey = license.toLowerCase().replace(/ /g, "-");
+    return `[${license}](https:choosealicense.com/licenses/${licenseKey})`
+  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  let badge = renderLicenseBadge(license);
+  let link = renderLicenseLink(license);
   if (!license) {
     return '';
+  } else {
+    return `${badge}
+${link}
+    `;
   }
-  return license
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  var README = 
-`# ${data.title} ${data.badge}
-
+function generateMarkdown(response) {
+  let licenseSection = renderLicenseSection(response.license)
+  
+  return `# ${response.title}
+        
 ## Description
-${data.description}
+${response.description}
 
 ## Table of Contents
--[Title](#Title)
--[Description](#Description)
--[Installation_Steps](#Installation_Steps)
--[Directions](#Directions) 
--[License](#License)
--[Contributors](#Contributors)
--[How_to_Test](#How_to_Test)
--[Questions](#Questions)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Test](#test)
+* [License](#license)
+* [Contact](#contact)
 
-## Installation Steps
-${data['installation-steps']}
+## Installation
+${response.installation}
 
-## Directions on how to use
-${data.directions}
-![screenshot](./assets/screenshot1.jpg)
-![walkthrough](./assets/walkthrough.webm)
+## Usage
+${response.usage}
+
+## Contribution
+${response.contribution}
+
+## Test
+${response.test}
 
 ## License
-${data.license}
+${licenseSection}
 
-## Contributors
-${data.contributors}
-
-## How to Test
-${data.tests}
-
-## Questions
-If you have any questions, feel free to contact me via email or gitHub.
-
-gitHub: https://github.com/${data.gitHub}
-email: ${data.email}`;
-
-    return JSON.stringify(README);
+## Contact
+[github](https:github.com/${response.github})
+[email](${response.email})
+[linkedIn](https:linkedin.com/in/${response.linkedin})
+`;
 }
 
-module.exports = {generateMarkdown, renderLicenseBadge, renderLicenseLink};
-
+module.exports = generateMarkdown;

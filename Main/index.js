@@ -1,96 +1,82 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const myFunctions = require('./utils/generateMarkdown.js');
-// console.log(myFunctions);
-
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = [
-    {
-        message: 'What would you like the title of your project to be?',
-        name: 'title',
-    },
-    {
-        message:'Describe your project...',
-        name: 'description'
-    },
-    {
-        message: 'How does one install your application?',
-        name: 'installation-steps'
-    },
-    {
-        message: 'How does one use your application?',
-        name: 'directions'
-    },
-    {
-        message: 'Who contributed to the development of this application?',
-        name: 'contributors'
-    },
-    {
-        message: 'How does one test the functionality of your application?',
-        name: 'tests'
-    },
-    {
-        message: 'What is your gitHub username?',
-        name: 'gitHub'
-    },
-    {
-        message: 'What is your email address?',
-        name: 'email'
-    },
-    {
-        message: 'Choose a license for your application',
-        name: 'license',
-        type: 'list',
-        choices: [
-                    {
-                        name: 'GNU General Public License (GPU)',
-                        value: 'GNU General Public License (GPU)',
-                        description: 'The most popular open source license.'
-                    },
-                    {
-                        name: 'The Apache License',
-                        value: 'The Apache License',
-                        description: 'Released by Apache Software Foundation (ASF), it is a popular and widely deployed open source license backed by a strong community.'
-                    },
-                    {
-                        name: 'Mozilla Public License (MPL)',
-                        value: 'Mozilla Public License (MPL)',
-                        description: 'A free and open source software license released by Microsoft.'
-                    },
-                    {
-                        name: 'Berkeley Software Distribution (BSD)',
-                        value: 'Berkeley Software Distribution (BSD)',
-                        description: 'A permissive free software license.'
-                    },
-                    {
-                        name: 'Eclipse Public License (EPL)',
-                        value: 'Eclipse Public License (EPL)',
-                        description: 'An open source license developed by the Eclipse Foundation.'
-                    }
-                ]
 
-    }
+const questions = [{
+    type: 'input',
+    message: 'What is the title of your project?',
+    name: 'title',
+},
+{
+    type: 'input',
+    message: 'What is the description of your project?',
+    name: 'description',
+},
+{
+    type: 'input',
+    message: 'What are the installation instructions?',
+    name: 'installation',
+},
+{
+    type: 'input',
+    message: 'How does one use the app?',
+    name: 'usage',
+},
+{
+    type: 'input',
+    message: 'Who deserves what credit?',
+    name: 'contribution',
+},
+{
+    type: 'input',
+    message: 'How does one test the app?',
+    name: 'test',
+},
+{
+    type: 'list',
+    message: 'Which license would you like to use?',
+    name: 'license',
+    choices: ['MIT', 'GNU', 'Apache', 'ISC', 'None'],
+},
+{
+    type: 'input',
+    message: 'What is your GitHub username?',
+    name: 'github',
+},
+{
+    type: 'input',
+    message: 'What is your email address?',
+    name: 'email',
+},
+{
+    type: 'input',
+    message: 'What is your LinkedIn username?',
+    name: 'linkedin',
+}
 ];
 
 // TODO: Create a function to write README file
+
 function writeToFile(fileName, data) {
     fs.writeFile(`fin/${fileName}`, data, (err) => {
-        err ? console.log('error') : console.log('success!');
-    })
+        if (err) {
+            console.error(err)
+        };
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((response) => {
-        response.badge = myFunctions.renderLicenseBadge(response.license);
-        response.link = myFunctions.renderLicenseLink(response.license);
-
-        var textStr = myFunctions.generateMarkdown(response);
-        writeToFile('README.md', JSON.parse(textStr))
+    inquirer.prompt(questions)
+    .then( (response) => {
+        let markdown = generateMarkdown(response);
+        writeToFile('README.md', markdown);
     })
-}
+};
 
 // Function call to initialize app
 init();
+//$$$$$$$$$$$$$
